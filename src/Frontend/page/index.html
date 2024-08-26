@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Web App</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptography Web App</h1>
+        <form id="cipher-form">
+            <label for="text">Enter text:</label><br>
+            <input type="text" id="text" name="text" required><br><br>
+
+            <div id="shift-option">
+                <label for="shift">Shift: </label><br>
+                <input type="number" id="shift" name="shift" value="0"><br><br>
+                
+                <div class="checkbox_main">
+                    <input type="checkbox" id="encode-numbers-caesar" name="encode-numbers-caesar">
+                    <label for="encode-numbers-caesar">Encode Numbers</label>
+                </div>
+            </div>
+
+            <label for="method">Choose Cipher Method:</label><br>
+            <select id="method" name="method" onchange="toggleOptions()">
+                <option value="caesar">Caesar Cipher</option>
+                <option value="rot13">ROT13 Cipher</option>
+                <option value="base64">Base64</option>
+            </select><br><br>
+
+            <div id="rot13-options" style="display: none;">
+                <div class="checkbox_main">
+                    <input type="checkbox" id="rotate-uppercase" name="rotate-uppercase">
+                    <label for="rotate-uppercase">Rotate Uppercase</label>
+                </div>
+                <div class="checkbox_main">
+                    <input type="checkbox" id="rotate-lowercase" name="rotate-lowercase">
+                    <label for="rotate-lowercase">Rotate Lowercase</label>
+                </div>
+                <div class="checkbox_main">
+                    <input type="checkbox" id="rotate-numbers" name="rotate-numbers">
+                    <label for="rotate-numbers">Rotate Numbers</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="encodeText()">Encode</button>
+            <button type="button" onclick="decodeText()">Decode</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

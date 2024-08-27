@@ -14,7 +14,6 @@ body {
 }
 
 #shift-option label[for="shift"] {
-    margin-bottom: 10px;
     display: inline-block;
 }
 

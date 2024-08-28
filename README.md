@@ -1,2 +1,2 @@
 # Crypto-site
-To run the Project use commadn "python3 app.py"
+To run the Project use command "python3 app.py"
